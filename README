@@ -1,0 +1,23 @@
+This project has a collection of repair-efficient erasure codes:
+
+1. Locally-repairable codes
+2. Simple regenerating codes
+3. MSR regenerating codes based on product matrix
+4. MBR regenerating codes based on product matrx
+5. MBR regenerating codes based on repair-by-transfer
+
+The GF-Complete library and Jerasure library, both by James Plank, need to be installed first. 
+2. https://bitbucket.org/jimplank/gf-complete
+1. https://bitbucket.org/jimplank/jerasure
+
+Before installing Jerasure library, the following two functions in jerasure.c need to be made non-static: 
+
+int **jerasure_generate_decoding_schedule(int k, int m, int w, int *bitmatrix, int *erasures, int smart);
+char **set_up_ptrs_for_scheduled_decoding(int k, int m, int *erasures, char **data_ptrs, char **coding_ptrs);
+
+Then follow the instruction given on bitbucket.org to install GF-complete and Jerasure. 
+
+
+
+
+
