@@ -16,6 +16,8 @@ int **jerasure_generate_decoding_schedule(int k, int m, int w, int *bitmatrix, i
 char **set_up_ptrs_for_scheduled_decoding(int k, int m, int *erasures, char **data_ptrs, char **coding_ptrs);
 
 Then follow the instruction given on bitbucket.org to install GF-complete and Jerasure. 
+
+Note: the following files should be in the include path
 jerasure.h
 galios.h
 cauchy.h
